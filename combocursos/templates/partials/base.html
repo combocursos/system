@@ -1,0 +1,28 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
+  <title>{% block title %} {% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static 'modules/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'modules/ionicons/css/ionicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css' %}">
+
+  <link rel="stylesheet" href="{% static 'modules/summernote/summernote-lite.css' %}">
+  <link rel="stylesheet" href="{% static 'modules/flag-icon-css/css/flag-icon.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+</head>
+
+<body>
+{% block main %}
+{% endblock %}
+<script src="{% static 'js/scripts.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/demo.js' %}"></script>
+</body>
+</html>

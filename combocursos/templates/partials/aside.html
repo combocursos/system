@@ -1,0 +1,97 @@
+{% load static %}
+<div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">Combo Cursos</a>
+          </div>
+          <div class="sidebar-user">
+            <div class="sidebar-user-picture">
+              <img alt="image" src="{% static 'img/avatar/avatar-1.jpeg' %}">
+            </div>
+            <div class="sidebar-user-details">
+              <div class="user-name">@{{user.username}}</div>
+              <div class="user-role">
+                {% if user.is_staff %}
+                  Admin
+                {% else %}
+                  {{user.tipo}}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          <ul class="sidebar-menu">
+            <li class="menu-header">Dashboard</li>
+            <li class="active">
+              <a href="{% url 'dashboard' %}"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
+            </li>
+
+            <li class="menu-header">Administração</li>
+
+            <li>
+              <a href="#" class="has-dropdown"><i><ion-icon name="md-contacts"></ion-icon></i></i><span>Alunos</span></a>
+              <ul class="menu-dropdown">
+                <li><a href="{% url 'novoaluno' %}"><i class="ion ion-person-add"></i>Novo</a></li>
+                <li><a href="{% url 'listaralunos' %}"><i class="ion ion-clipboard"></i>Listar</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="has-dropdown"><i><ion-icon name="ios-briefcase"></ion-icon></i><span>Funcionários</span></a>
+              <ul class="menu-dropdown">
+                <li><a href="{% url 'novofuncionario' %}"><i class="ion ion-person-add"></i> Novo</a></li>
+                <li><a href="{% url 'listarfuncionarios' %}"><i class="ion ion-clipboard"></i> Listar</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="has-dropdown"><i><ion-icon name="bookmarks"></ion-icon></i><span>Cursos</span></a>
+              <ul class="menu-dropdown">
+                <li><a href="{% url 'novocurso' %}"><i><ion-icon name="add-circle"></ion-icon></i>Novo</a></li>
+                <li><a href="{% url 'listarcursos' %}"><i><ion-icon name="paper"></ion-icon></i>Listar</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#" class="has-dropdown"><i><ion-icon name="ios-book"></ion-icon></i><span>Livros</span></a>
+              <ul class="menu-dropdown">
+                <li><a href="{% url 'novolivro' %}"><i><ion-icon name="add-circle"></ion-icon></i>Novo</a></li>
+                <li><a href="{% url 'listarlivros' %}"><i><ion-icon name="paper"></ion-icon></i>Listar</a></li>
+              </ul>
+            </li>
+
+
+            <li class="menu-header">More</li>
+            <li>
+              <a href="#" class="has-dropdown"><i class="ion ion-ios-nutrition"></i> Click Me</a>
+              <ul class="menu-dropdown">
+                <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Menu 1</a></li>
+                <li><a href="#" class="has-dropdown"><i class="ion ion-ios-circle-outline"></i> Menu 2</a>
+                  <ul class="menu-dropdown">
+                    <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Child Menu 1</a></li>
+                    <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Child Menu 2</a></li>
+                    <li><a href="#" class="has-dropdown"><i class="ion ion-ios-circle-outline"></i> Child Menu 3</a>
+                      <ul class="menu-dropdown">
+                        <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Child Menu 1</a></li>
+                        <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Child Menu 2</a></li>
+                        <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Child Menu 3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><i class="ion ion-ios-circle-outline"></i> Child Menu 4</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="ion ion-heart"></i> Badges <div class="badge badge-primary">10</div></a>
+            </li>
+            <li>
+              <a href="credits.html"><i class="ion ion-ios-information-outline"></i> Credits</a>
+            </li>          </ul>
+          <div class="p-3 mt-4 mb-4">
+            <a href="http://stisla.multinity.com/" class="btn btn-danger btn-shadow btn-round has-icon has-icon-nofloat btn-block">
+              <i class="ion ion-help-buoy"></i> <div>Go PRO!</div>
+            </a>
+          </div>
+        </aside>
+      </div>
